@@ -97,7 +97,7 @@ export default function Services() {
         ))}
       </div>
 
-      <Reveal delay={0.1} className="mt-10 text-center">
+      {/* <Reveal delay={0.1} className="mt-10 text-center">
         <a
           href="#contact"
           data-cursor
@@ -106,7 +106,7 @@ export default function Services() {
           Tell me what you&apos;re building
           <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:rotate-45" />
         </a>
-      </Reveal>
+      </Reveal> */}
     </section>
   );
 }

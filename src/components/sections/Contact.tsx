@@ -96,7 +96,9 @@ export default function Contact() {
             <Reveal delay={0.2}>
               <p className="mt-6 max-w-xl text-muted-foreground">
                 If your business already depends on spreadsheets, CRMs, websites, APIs, manual processes, or repetitive communication, there's usually an opportunity to connect them into something better.
-
+              </p>
+              <br/>
+              <p>
                 Tell me what you're trying to build, fix, or automate.
               </p>
             </Reveal>

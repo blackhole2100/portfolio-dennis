@@ -2,11 +2,12 @@
 
 import dynamic from "next/dynamic";
 import { motion } from "motion/react";
-import { ArrowDown } from "lucide-react";
-import { GithubIcon } from "@/components/icons";
+import { ArrowDown, Download } from "lucide-react";
+// import { GithubIcon } from "@/components/icons";
 import { profile } from "@/data/profile";
 import TextReveal from "@/components/TextReveal";
 import MagneticButton from "@/components/MagneticButton";
+import resume from '../assets/resume.pdf';
 
 const MeshGradient = dynamic(
   () => import("@paper-design/shaders-react").then((m) => m.MeshGradient),
@@ -95,6 +96,17 @@ export default function Hero() {
               className="glass glass-btn inline-flex h-12 items-center gap-2 rounded-full px-7 font-medium text-foreground hover:text-primary"
             >
               Let's work together
+            </a>
+          </MagneticButton>
+          <MagneticButton>
+            <a
+              href={resume}
+              download="Resume.pdf"
+              target="_blank"
+              className="glass glass-btn inline-flex h-12 items-center gap-2 rounded-full px-7 font-medium text-foreground hover:text-primary"
+            >
+                <Download size={20} />
+                Resume
             </a>
           </MagneticButton>
           {/* <MagneticButton>
