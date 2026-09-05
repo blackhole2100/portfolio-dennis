@@ -64,7 +64,7 @@ export default function Impact() {
           </p> */}
 
         </Reveal>
-        <div className="grid grid-cols-3 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-6">
+        <div className="grid grid-cols-2 gap-x-4 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
           {profile.delivered.map((d, i) => (
             <Reveal key={d.label} delay={Math.min(i * 0.05, 0.25)}>
               <div className="text-center">
