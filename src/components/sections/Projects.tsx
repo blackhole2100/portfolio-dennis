@@ -14,7 +14,6 @@ export default function Projects() {
         index="04"
         eyebrow="Personal Projects"
         title="Things I build after hours"
-        description="Agents, RAG, realtime — the personal lab where the production ideas start."
       />
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
