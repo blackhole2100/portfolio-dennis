@@ -85,7 +85,7 @@ export default function Nav() {
           className="glass flex items-center justify-between rounded-full px-4 py-2.5 transition-[background-color,box-shadow] duration-500 sm:px-5 sm:py-3"
         >
           <Link href="/" className="font-display text-lg font-bold tracking-tight" data-cursor>
-            <span className="text-gradient">YS</span>
+            <span className="text-gradient">DH</span>
             {pathname?.startsWith("/work") && (
               <span className="ml-2 hidden font-mono text-[10px] font-normal text-muted-foreground sm:inline">
                 ← back home

@@ -59,17 +59,17 @@ export default function Hero() {
           delay={1.8}
           className="font-display text-[13vw] leading-[0.95] font-bold tracking-tight sm:text-7xl md:text-8xl lg:text-[7rem]"
         >
-          Dennis
+          Dennis Haun
         </TextReveal>
-        
+
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.5, duration: 0.7 }}
           className="mt-8 max-w-xl text-base text-muted-foreground sm:text-lg"
         >
-          {profile.tagline} Eight production systems governing ₹11.5 Cr of
-          procurement, company finances and payments across 44 project sites.
+          {profile.tagline} 
+          Full-stack applications, AI-powered automation, CRM platforms, and CMS systems built around the way businesses actually operate.
         </motion.p>
 
         <motion.div
@@ -84,7 +84,7 @@ export default function Hero() {
               data-cursor
               className="glass-solid inline-flex h-12 items-center gap-2 rounded-full bg-primary px-7 font-medium text-white transition-shadow"
             >
-              See my work <ArrowDown size={16} />
+              View my work <ArrowDown size={16} />
             </a>
           </MagneticButton>
           <MagneticButton>
@@ -93,10 +93,10 @@ export default function Hero() {
               data-cursor
               className="glass glass-btn inline-flex h-12 items-center gap-2 rounded-full px-7 font-medium text-foreground hover:text-primary"
             >
-              Get in touch
+              Let's work together
             </a>
           </MagneticButton>
-          <MagneticButton>
+          {/* <MagneticButton>
             <a
               href={profile.socials.github}
               target="_blank"
@@ -107,7 +107,7 @@ export default function Hero() {
             >
               <GithubIcon size={18} />
             </a>
-          </MagneticButton>
+          </MagneticButton> */}
         </motion.div>
       </div>
 
