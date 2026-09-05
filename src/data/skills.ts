@@ -204,7 +204,21 @@ export const skillGroups: SkillGroup[] = [
     ],
     size: "sm",
   },
-
+  {
+    key: "languages",
+    title: "Languages",
+    blurb:
+      "The languages I use to build applications, automation, integrations, and data systems.",
+    items: [
+      "TypeScript",
+      "JavaScript",
+      "Python",
+      "PHP",
+      "Java",
+      "SQL",
+    ],
+    size: "sm",
+  },
 
 ];
 
