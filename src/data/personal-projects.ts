@@ -3,6 +3,7 @@ export type PersonalProject = {
   description: string;
   stack: string[];
   github: string;
+  github: "",
   live?: string;
   accent: string;
 };
@@ -13,6 +14,7 @@ export const personalProjects: PersonalProject[] = [
     description:
       "Multi-role ticketing platform (Admin / Agent / Customer) with AI auto-classification, summarization and smart reply suggestions. Zod-validated APIs, Cloudinary uploads, email notifications.",
     stack: ["Next.js", "MongoDB", "Zod", "Cloudinary", "AI APIs"],
+    github: "",
     live: "https://ticket-system-nextjs-kappa.vercel.app",
     accent: "#7C3AED",
   },
@@ -21,6 +23,7 @@ export const personalProjects: PersonalProject[] = [
     description:
       "A GPT-powered agent that generates, validates and executes SQL through Model Context Protocol tools — with role-based access control, dry-run safeguards and full audit logging.",
     stack: ["FastAPI", "PostgreSQL", "SQLAlchemy", "MCP", "OpenAI"],
+    github: "",
     accent: "#0e7490",
   },
   {
@@ -28,6 +31,7 @@ export const personalProjects: PersonalProject[] = [
     description:
       "Multi-agent scheduling system: LangGraph stateful workflows, LLM intent classification, tool-based execution and a real-time agent observability dashboard.",
     stack: ["FastAPI", "LangGraph", "Groq", "SQLAlchemy"],
+    github: "",
     live: "https://ai-interview-chatbot-gilt.vercel.app",
     accent: "#6366F1",
   },
@@ -36,6 +40,7 @@ export const personalProjects: PersonalProject[] = [
     description:
       "Document Q&A platform: chunking, embedding generation, semantic Top-K retrieval over Pinecone, contextual chat history, and a role-based admin console with usage analytics.",
     stack: ["Flask", "React", "Pinecone", "Groq", "MongoDB"],
+    github: "",
     accent: "#9333ea",
   },
   {
@@ -43,6 +48,7 @@ export const personalProjects: PersonalProject[] = [
     description:
       "Full-stack app that turns meetings into structured, searchable AI-generated notes and action items.",
     stack: ["JavaScript", "Node.js", "React", "AI APIs"],
+    github: "",
     live: "https://ai-meeting-notes-zeta.vercel.app",
     accent: "#0e7490",
   },
@@ -51,6 +57,7 @@ export const personalProjects: PersonalProject[] = [
     description:
       "Conversational therapy companion with a calm, focused interface for supportive AI conversations.",
     stack: ["Next.js", "TypeScript", "Tailwind"],
+    github: "",
     live: "https://ai-therapist-agent-frontend-psi.vercel.app",
     accent: "#8b5cf6",
   },
@@ -59,6 +66,7 @@ export const personalProjects: PersonalProject[] = [
     description:
       "Socket.io instant messaging with group chats, photo/video/file sharing, emoji, push notifications and Google OAuth — Redux-managed MERN stack.",
     stack: ["React", "Redux Toolkit", "Node.js", "MongoDB", "Socket.io"],
+    github: "",
     live: "https://chatapp-frontend-f2varpu9a-499s-projects.vercel.app/login",
     accent: "#0284c7",
   },
@@ -67,6 +75,7 @@ export const personalProjects: PersonalProject[] = [
     description:
       "Real-time hand tracking from webcam video with MediaPipe landmarks — a foundation for gesture-driven interfaces.",
     stack: ["Python", "OpenCV", "MediaPipe"],
+    github: "",
     accent: "#0d9488",
   },
 ];

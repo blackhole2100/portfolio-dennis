@@ -2,6 +2,7 @@ export const profile = {
   name: "Dennis ",
 
   role: "Full-Stack & AI Engineer",
+  phone:"",
   tagline: "I build AI-powered systems that run real companies.",
   intro:
     "Engineer at Hagerstone International, where I designed and shipped the company's entire in-house ERP ecosystem — procurement, finance, HR, labour and analytics — unified on one platform, powered by LLM agents and operated over WhatsApp.",
