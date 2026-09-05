@@ -7,7 +7,7 @@ import { ArrowDown, Download } from "lucide-react";
 import { profile } from "@/data/profile";
 import TextReveal from "@/components/TextReveal";
 import MagneticButton from "@/components/MagneticButton";
-import resume from '../assets/resume.pdf';
+import resume from '@/assets/resume.pdf';
 
 const MeshGradient = dynamic(
   () => import("@paper-design/shaders-react").then((m) => m.MeshGradient),
