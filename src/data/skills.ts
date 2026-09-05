@@ -33,7 +33,7 @@ export const skillGroups: SkillGroup[] = [
       "XGBoost",
       "LightGBM",
     ],
-    size: "lg",
+    size: "md",
   },
 
   {
@@ -55,7 +55,7 @@ export const skillGroups: SkillGroup[] = [
       "UX / UI Implementation",
       "React Native / Expo",
     ],
-    size: "md",
+    size: "sm",
   },
 
   {
@@ -77,7 +77,7 @@ export const skillGroups: SkillGroup[] = [
       "Pydantic",
       "Server-side Architecture",
     ],
-    size: "md",
+    size: "sm",
   },
 
   {
@@ -98,7 +98,7 @@ export const skillGroups: SkillGroup[] = [
       "Data Modeling",
       "SQL",
     ],
-    size: "md",
+    size: "sm",
   },
 
   {
@@ -119,7 +119,7 @@ export const skillGroups: SkillGroup[] = [
       "Client Portals",
       "Custom Business Systems",
     ],
-    size: "lg",
+    size: "md",
   },
 
   {
@@ -141,7 +141,7 @@ export const skillGroups: SkillGroup[] = [
       "Self-hosted WhatsApp Gateway",
       "Edge Functions",
     ],
-    size: "md",
+    size: "sm",
   },
 
   {
@@ -162,7 +162,7 @@ export const skillGroups: SkillGroup[] = [
       "Custom CMS Development",
       "eCommerce Development",
     ],
-    size: "md",
+    size: "sm",
   },
 
   {
