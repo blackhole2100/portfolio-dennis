@@ -17,7 +17,6 @@ export default function CompanyWork() {
         index="01"
         eyebrow="Selected Work"
         title="One engineering foundation. Many business systems."
-        description={`${companyIntro.context}`}
       />
 
       {/* These are ~100-char sentences, not tags — they wrap to several lines

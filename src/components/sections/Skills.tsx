@@ -27,7 +27,6 @@ export default function Skills() {
           index="06"
           eyebrow="Stack"
           title="Tools of the trade"
-          description="The AI layer is the differentiator — everything else exists to ship it reliably."
         />
 
         {/* auto-rows-fr only from sm: in a single column it forces every card

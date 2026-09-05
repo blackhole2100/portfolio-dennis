@@ -12,8 +12,8 @@ const links = [
   // { href: "/#automations", label: "Automations" },
   // { href: "/#projects", label: "Projects" },
   { href: "/#about", label: "About" },
-  { href: "/#services", label: "Services" },
   { href: "/#experience", label: "Experience" },
+  { href: "/#services", label: "Services" },
   { href: "/#contact", label: "Contact" },
 ];
 

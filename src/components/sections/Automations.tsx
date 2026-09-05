@@ -33,7 +33,6 @@ export default function Automations() {
           index="03"
           eyebrow="Automation Layer"
           title="46 workflows running the company"
-          description="Every approval, reminder and dispatch in the business runs through n8n workflows I designed — WhatsApp-first, AI-scored, and audit-logged. These are the real graphs, pulled from the live instance."
         />
 
         {/* headline stats */}

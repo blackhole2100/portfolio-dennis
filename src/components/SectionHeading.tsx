@@ -4,7 +4,6 @@ type Props = {
   index: string;
   eyebrow: string;
   title: string;
-  description?: string;
 };
 
 export default function SectionHeading({ index, eyebrow, title }: Props) {

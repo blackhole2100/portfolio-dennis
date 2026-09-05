@@ -51,7 +51,6 @@ export default function About() {
         index="05"
         eyebrow="About"
         title="I ship systems, not demos"
-        description="What a business owner gets when they work with me: operations that run themselves, money that can't move without a trail, and AI that answers to a human."
       />
 
       <div className="grid items-start gap-12 lg:grid-cols-[1fr_20rem]">

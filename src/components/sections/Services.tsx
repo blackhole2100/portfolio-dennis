@@ -29,7 +29,6 @@ export default function Services() {
         index="08"
         eyebrow="Services"
         title={servicesIntro.title}
-        description={servicesIntro.description}
       />
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">

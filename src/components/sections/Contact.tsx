@@ -72,7 +72,7 @@ export default function Contact() {
 
       <div className="relative mx-auto max-w-6xl">
         <p className="mb-4 font-mono text-[11px] tracking-[0.2em] text-accent uppercase sm:text-xs sm:tracking-[0.3em]">
-          <span className="text-subtle-foreground">09 /</span> Contact
+          Contact
         </p>
 
         <div className="grid items-start gap-10 lg:grid-cols-[1fr_22rem] lg:gap-14">
