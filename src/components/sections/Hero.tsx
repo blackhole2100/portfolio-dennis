@@ -7,7 +7,6 @@ import { ArrowDown, Download } from "lucide-react";
 import { profile } from "@/data/profile";
 import TextReveal from "@/components/TextReveal";
 import MagneticButton from "@/components/MagneticButton";
-import resume from '@/assets/resume.pdf';
 
 const MeshGradient = dynamic(
   () => import("@paper-design/shaders-react").then((m) => m.MeshGradient),
@@ -100,7 +99,7 @@ export default function Hero() {
           </MagneticButton>
           <MagneticButton>
             <a
-              href={resume}
+              href="/resume.pdf"
               download="Resume.pdf"
               target="_blank"
               className="glass glass-btn inline-flex h-12 items-center gap-2 rounded-full px-7 font-medium text-foreground hover:text-primary"
