@@ -2,11 +2,12 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { ArrowUpRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
+// import { ArrowUpRight, Check } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/icons";
 import { profile } from "@/data/profile";
 import TextReveal from "@/components/TextReveal";
-import MagneticButton from "@/components/MagneticButton";
+// import MagneticButton from "@/components/MagneticButton";
 import Reveal from "@/components/Reveal";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -94,12 +95,13 @@ export default function Contact() {
 
             <Reveal delay={0.2}>
               <p className="mt-6 max-w-xl text-muted-foreground">
-                Open to full-stack and AI engineering roles, freelance systems work, and
-                interesting conversations about agents with accountability.
+                If your business already depends on spreadsheets, CRMs, websites, APIs, manual processes, or repetitive communication, there's usually an opportunity to connect them into something better.
+
+                Tell me what you're trying to build, fix, or automate.
               </p>
             </Reveal>
 
-            <Reveal delay={0.28}>
+            {/* <Reveal delay={0.28}>
               <form onSubmit={onSubmit} noValidate className="mt-10 max-w-2xl">
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div>
@@ -174,7 +176,7 @@ export default function Contact() {
                       <ArrowUpRight size={16} />
                     </button>
                   </MagneticButton>
-                  <MagneticButton strength={0.3}>
+                  {/* <MagneticButton strength={0.3}>
                     <a
                       href={`https://wa.me/${waNumber}`}
                       target="_blank"
@@ -185,7 +187,7 @@ export default function Contact() {
                       WhatsApp me
                       <ArrowUpRight size={16} />
                     </a>
-                  </MagneticButton>
+                  </MagneticButton> */}
                   <a
                     href={`mailto:${profile.email}`}
                     className="font-mono text-xs text-subtle-foreground transition-colors hover:text-foreground"
@@ -225,7 +227,7 @@ export default function Contact() {
                   </AnimatePresence>
                 </div>
               </form>
-            </Reveal>
+            </Reveal> */}
           </div>
 
           <Reveal delay={0.2} className="lg:sticky lg:top-28">

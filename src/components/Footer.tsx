@@ -34,7 +34,7 @@ export default function Footer() {
             {profile.location} · {time || "--:--:--"} IST
           </span>
         </div>
-        <div className="flex items-center gap-3">
+        {/* <div className="flex items-center gap-3">
           {[
             { href: profile.socials.github, icon: GithubIcon, label: "GitHub" },
             { href: profile.socials.linkedin, icon: LinkedinIcon, label: "LinkedIn" },
@@ -52,9 +52,9 @@ export default function Footer() {
               </a>
             </MagneticButton>
           ))}
-        </div>
+        </div> */}
         <p className="text-center font-mono text-[11px] text-subtle-foreground">
-          © {new Date().getFullYear()} — built with Next.js, GSAP & too much coffee
+          © {new Date().getFullYear()} — built with Next.js, GSAP
         </p>
       </div>
     </footer>

@@ -9,9 +9,11 @@ import MagneticButton from "@/components/MagneticButton";
 
 const links = [
   { href: "/#work", label: "Work" },
-  { href: "/#automations", label: "Automations" },
-  { href: "/#projects", label: "Projects" },
+  // { href: "/#automations", label: "Automations" },
+  // { href: "/#projects", label: "Projects" },
+  { href: "/#about", label: "About" },
   { href: "/#services", label: "Services" },
+  { href: "/#experience", label: "Experience" },
   { href: "/#contact", label: "Contact" },
 ];
 
