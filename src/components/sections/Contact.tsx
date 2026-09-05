@@ -187,7 +187,7 @@ export default function Contact() {
                       WhatsApp me
                       <ArrowUpRight size={16} />
                     </a>
-                  </MagneticButton> */}
+                  </MagneticButton> 
                   <a
                     href={`mailto:${profile.email}`}
                     className="font-mono text-xs text-subtle-foreground transition-colors hover:text-foreground"
