@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 
-const words = ["Build", "Automate", "Govern", "Ship"];
+const words = ["Architect", "Build", "Automate", "Evolve"];
 
 export default function Preloader() {
   const reduced = useReducedMotion();
@@ -17,14 +17,14 @@ export default function Preloader() {
       return;
     }
     const start = performance.now();
-    const total = 1400;
+    const total = 1000;
     let raf: number;
     const tick = (now: number) => {
       const p = Math.min((now - start) / total, 1);
       setCount(Math.round(p * 100));
       setWordIndex(Math.min(Math.floor(p * words.length), words.length - 1));
       if (p < 1) raf = requestAnimationFrame(tick);
-      else setTimeout(() => setDone(true), 150);
+      else setTimeout(() => setDone(true), 100);
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);

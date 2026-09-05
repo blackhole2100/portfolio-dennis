@@ -27,7 +27,6 @@ export default function VideoShowcase() {
         index="02"
         eyebrow="Live Walkthrough"
         title="See the systems running"
-        description="A guided tour of the three systems at the core of the company — the Hub portal, CPS procurement, and Finance imprest — as they run in production."
       />
 
       <Reveal>

@@ -205,26 +205,11 @@ export const skillGroups: SkillGroup[] = [
     size: "sm",
   },
 
-  {
-    key: "languages",
-    title: "Languages",
-    blurb:
-      "The languages I use to build applications, automation, integrations, and data systems.",
-    items: [
-      "TypeScript",
-      "JavaScript",
-      "Python",
-      "PHP",
-      "Java",
-      "SQL",
-    ],
-    size: "sm",
-  },
+
 ];
 
 export const marqueeSkills = [
   "AI Agents",
-  "AI Applications",
   "Python",
   "TypeScript",
   "JavaScript",
@@ -233,8 +218,6 @@ export const marqueeSkills = [
   "Node.js",
   "FastAPI",
   "Flask",
-  "LangGraph",
-  "LangChain",
   "RAG",
   "MCP",
   "Claude",
