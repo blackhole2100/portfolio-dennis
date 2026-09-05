@@ -1,14 +1,20 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Mail } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/icons";
+// import { Mail } from "lucide-react";
+// import { GithubIcon, LinkedinIcon } from "@/components/icons";
 import { profile } from "@/data/profile";
-import MagneticButton from "@/components/MagneticButton";
+// import MagneticButton from "@/components/MagneticButton";
 
 export default function Footer() {
   const [time, setTime] = useState("");
-
+  const mountainTimeZone = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Denver",
+    timeZoneName: "short",
+  })
+    .formatToParts(new Date())
+    .find((part) => part.type === "timeZoneName")?.value;
+  
   useEffect(() => {
     const update = () =>
       setTime(
@@ -54,7 +60,7 @@ export default function Footer() {
           ))}
         </div> */}
         <p className="text-center font-mono text-[11px] text-subtle-foreground">
-          © {new Date().getFullYear()} — built with Next.js, GSAP
+           © {new Date().getFullYear()} · Mountain Time ({mountainTimeZone}) — built with Next.js, GSAP
         </p>
       </div>
     </footer>
