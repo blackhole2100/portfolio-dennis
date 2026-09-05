@@ -10,47 +10,55 @@ export type Service = {
 export const servicesIntro = {
   title: "Three ways we can work.",
   description:
-    "Same approach every time: understand how the business already runs, then replace the parts that leak time or money with software that answers to a named human.",
+    "Whether you're building something new, connecting systems you already have, or improving an existing application, the goal is the same: turn complex business requirements into software that is useful, maintainable, and ready to grow.",
 };
 
 export const services: Service[] = [
   {
-    title: "Custom Business Systems & Automation",
+    title: "Full-Stack Applications & Business Systems",
     description:
-      "End-to-end internal platforms: procurement, expense and cash-advance management, approvals, task delegation, attendance, vendor management. Built around how the company already works — approvals on WhatsApp, AI to remove data entry, audit trails to remove doubt. Delivered as working software in production, not a slide deck.",
+      "From internal tools and SaaS platforms to client portals and operational applications, I build complete systems across the frontend, backend, database, APIs, authentication, and third-party integrations. The focus is on solving the workflow behind the software, not just producing another interface.",
     deliverables: [
-      "Process mapping from how your team actually operates today",
-      "Postgres schema, role-based access and an append-only audit trail",
-      "WhatsApp-first approvals, reminders and dispatch — English and Hindi",
-      "Handover docs and a runbook your team can operate without me",
+      "Application architecture, database design, APIs, authentication, and role-based access",
+      "React / Next.js frontends with Python or Node.js backends",
+      "Business workflows, dashboards, reporting, and operational tools",
+      "Payments, shipping, communications, and external API integrations",
+      "Production deployment, documentation, and maintainable handoff",
     ],
-    engagement: "Scoped build (4–10 weeks) + optional monthly retainer for extension and support.",
+    engagement:
+      "Fixed-scope project or milestone-based build, typically 4–10 weeks depending on system complexity.",
     accent: "#7c3aed",
   },
+
   {
-    title: "AI & Agent Engineering",
+    title: "AI, Agents & Workflow Automation",
     description:
-      "Retrieval pipelines, tool-using agents and LLM workflows that stay accountable. Model routing by task, cost-gated calls and read-through caches keep the bill predictable. Every decision path ends at a named approver — an LLM never releases money.",
+      "Practical AI systems that connect models to real business workflows. I build AI applications, agentic workflows, RAG pipelines, and automation that can classify, summarize, retrieve, reason, and trigger actions without turning the system into an uncontrolled black box.",
     deliverables: [
-      "Grounded RAG over your own documents, with citations",
-      "Agents that propose with a confidence score, then wait for a human",
-      "Server-side proxy — API keys never reach the browser",
-      "Per-task model routing and a cost ceiling you set",
+      "AI applications, agents, RAG pipelines, and tool-using workflows",
+      "LLM integrations with OpenAI, Claude, Gemini, and other model providers",
+      "LangGraph / LangChain / MCP-based agent workflows",
+      "n8n, Zapier, Make, Twilio, CRM, and API automation",
+      "Human-in-the-loop controls, validation, logging, and secure server-side execution",
     ],
-    engagement: "Fixed-scope sprint(s), typically 3–6 weeks.",
+    engagement:
+      "Fixed-scope AI sprint or staged implementation, typically 2–6 weeks depending on integrations and workflow complexity.",
     accent: "#0891b2",
   },
+
   {
-    title: "Web Platforms & Interfaces",
+    title: "CRM, CMS & eCommerce Development",
     description:
-      "Fast, SEO-ready marketing sites and product interfaces on Next.js. Design, build, deploy and iterate — sprint-based, with the same attention to performance and accessibility as the systems running behind them.",
+      "Websites and business platforms built around the tools companies already depend on. With deep experience across WordPress, Shopify, HubSpot, WooCommerce, and CRM integrations, I can extend an existing platform, rebuild a broken workflow, or connect the website to the systems behind it.",
     deliverables: [
-      "Next.js App Router build, statically rendered where it counts",
-      "Core Web Vitals and accessibility treated as acceptance criteria",
-      "Design system and components you can extend yourself",
-      "Deploy pipeline, analytics and a measurable baseline",
+      "Custom WordPress, Shopify, WooCommerce, and HubSpot implementations",
+      "CRM integrations with platforms such as HubSpot, Pipedrive, and Zoho",
+      "Custom themes, portals, CMS experiences, and conversion-focused interfaces",
+      "API integrations connecting websites, CRMs, automation, and external services",
+      "Performance, usability, SEO, and ongoing technical improvements",
     ],
-    engagement: "Fixed-scope sprint(s), typically 2–5 weeks.",
+    engagement:
+      "Fixed-scope implementation or monthly development retainer, typically 2–6 weeks for defined projects.",
     accent: "#d946ef",
   },
 ];
