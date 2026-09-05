@@ -1,7 +1,7 @@
 "use client";
 
-import { ExternalLink } from "lucide-react";
-import { GithubIcon } from "@/components/icons";
+// import { ExternalLink } from "lucide-react";
+// import { GithubIcon } from "@/components/icons";
 import { personalProjects } from "@/data/personal-projects";
 import SectionHeading from "@/components/SectionHeading";
 import SpotlightCard from "@/components/SpotlightCard";
@@ -36,7 +36,7 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-                <div className="flex items-center gap-2">
+                {/* <div className="flex items-center gap-2">
                   <a
                     href={p.github}
                     target="_blank"
@@ -61,7 +61,7 @@ export default function Projects() {
                       <ExternalLink size={13} /> Live
                     </a>
                   )}
-                </div>
+                </div> */}
               </div>
             </SpotlightCard>
           </Reveal>
