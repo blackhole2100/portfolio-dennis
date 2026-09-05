@@ -3,7 +3,6 @@ export type PersonalProject = {
   description: string;
   stack: string[];
   github: string;
-  github: "",
   live?: string;
   accent: string;
 };

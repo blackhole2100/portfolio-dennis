@@ -61,16 +61,7 @@ export default function Hero() {
         >
           Dennis
         </TextReveal>
-        <TextReveal
-          as="h1"
-          split="block"
-          immediate
-          delay={2.1}
-          className="text-gradient font-display text-[13vw] leading-[0.95] font-bold tracking-tight sm:text-7xl md:text-8xl lg:text-[7rem]"
-        >
-          
-        </TextReveal>
-
+        
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
