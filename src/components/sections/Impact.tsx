@@ -59,14 +59,12 @@ export default function Impact() {
     <section className="glass-pane glass-soft glass-flat relative overflow-hidden [--glass-tint:rgba(255,255,255,0.5)]">
       <div className="relative mx-auto max-w-6xl px-6 py-16">
         <Reveal>
-          <p className="mb-3 text-center font-mono text-xs tracking-[0.3em] text-accent uppercase">
+          {/* <p className="mb-3 text-center font-mono text-xs tracking-[0.3em] text-accent uppercase">
             Delivered in production
-          </p>
-          <p className="mb-12 text-center text-sm text-subtle-foreground">
-            Live figures from the systems I built and run
-          </p>
+          </p> */}
+
         </Reveal>
-        <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-6">
+        <div className="grid grid-cols-3 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-6">
           {profile.delivered.map((d, i) => (
             <Reveal key={d.label} delay={Math.min(i * 0.05, 0.25)}>
               <div className="text-center">

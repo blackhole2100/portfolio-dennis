@@ -69,6 +69,7 @@ export default function Hero() {
           className="mt-8 max-w-xl text-base text-muted-foreground sm:text-lg"
         >
           {profile.tagline} 
+          <br></br>
           Full-stack applications, AI-powered automation, CRM platforms, and CMS systems built around the way businesses actually operate.
         </motion.p>
 

@@ -16,14 +16,14 @@ export default function CompanyWork() {
       <SectionHeading
         index="01"
         eyebrow="Selected Work"
-        title="One company, one platform, eight systems"
+        title="One engineering foundation. Many business systems."
         description={`${companyIntro.context}`}
       />
 
       {/* These are ~100-char sentences, not tags — they wrap to several lines
           at every width, and a wrapped `rounded-full` reads as a lopsided
           ellipse. A fixed corner radius holds up at any line count. */}
-      <Reveal className="mb-12 flex flex-wrap gap-2 sm:gap-3">
+      {/* <Reveal className="mb-12 flex flex-wrap gap-2 sm:gap-3">
         {companyIntro.themes.map((t) => (
           <span
             key={t}
@@ -32,7 +32,7 @@ export default function CompanyWork() {
             {t}
           </span>
         ))}
-      </Reveal>
+      </Reveal> */}
 
       <div className="relative">
         {caseStudies.map((cs, i) => (
