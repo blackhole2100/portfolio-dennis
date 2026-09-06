@@ -14,8 +14,8 @@ export const profile = {
   siteUrl: "https://portfolio-dennis-delta.vercel.app/",
 
   socials: {
-    github: "",
-    linkedin: "",
+    github: "https://github.com/blackhole2100",
+    linkedin: "https://www.linkedin.com/in/dennis-haun-391826434/",
   },
 
   about: [
