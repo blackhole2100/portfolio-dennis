@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/icons";
 import { profile } from "@/data/profile";
-// import MagneticButton from "@/components/MagneticButton";
+import MagneticButton from "@/components/MagneticButton";
 
 export default function Footer() {
   const [time, setTime] = useState("");
