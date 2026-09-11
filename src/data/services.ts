@@ -15,50 +15,78 @@ export const servicesIntro = {
 
 export const services: Service[] = [
   {
-    title: "Full-Stack Applications & Business Systems",
+    title: "Full-Stack Application Engineering",
+
     description:
-      "From internal tools and SaaS platforms to client portals and operational applications, I build complete systems across the frontend, backend, database, APIs, authentication, and third-party integrations. The focus is on solving the workflow behind the software, not just producing another interface.",
+      "I build complete software products across the frontend, backend, database, APIs, authentication, integrations, and cloud infrastructure. From SaaS platforms and internal applications to customer-facing products, the focus is on designing the system as a whole and delivering production-ready software end to end.",
+
     deliverables: [
       "Application architecture, database design, APIs, authentication, and role-based access",
-      "React / Next.js frontends with Python or Node.js backends",
-      "Business workflows, dashboards, reporting, and operational tools",
-      "Payments, shipping, communications, and external API integrations",
-      "Production deployment, documentation, and maintainable handoff",
+
+      "React / Next.js frontends with Python, Node.js, or C# / .NET backends",
+
+      "SaaS platforms, dashboards, portals, operational applications, and custom business systems",
+
+      "REST APIs, third-party integrations, payments, communications, and external services",
+
+      "Cloud deployment, environment configuration, documentation, and maintainable handoff",
     ],
+
     engagement:
-      "Fixed-scope project or milestone-based build, typically 4–10 weeks depending on system complexity.",
+      "Fixed-scope project or milestone-based development, typically 4–12 weeks depending on application complexity.",
+
     accent: "#7c3aed",
   },
 
   {
-    title: "AI, Agents & Workflow Automation",
+    title: "AI Engineering & Intelligent Automation",
+
     description:
-      "Practical AI systems that connect models to real business workflows. I build AI applications, agentic workflows, RAG pipelines, and automation that can classify, summarize, retrieve, reason, and trigger actions without turning the system into an uncontrolled black box.",
+      "I engineer practical AI systems that become part of real applications and workflows. This includes AI-powered products, agents, RAG systems, multi-agent workflows, MCP integrations, and automation designed to reason, retrieve information, generate content, and execute controlled actions.",
+
     deliverables: [
-      "AI applications, agents, RAG pipelines, and tool-using workflows",
-      "LLM integrations with OpenAI, Claude, Gemini, and other model providers",
-      "LangGraph / LangChain / MCP-based agent workflows",
-      "n8n, Zapier, Make, Twilio, CRM, and API automation",
-      "Human-in-the-loop controls, validation, logging, and secure server-side execution",
+      "AI applications, AI agents, RAG pipelines, and multi-agent workflows",
+
+      "LLM integrations with OpenAI, Claude, Gemini, Groq, and other model providers",
+
+      "LangGraph, LangChain, MCP, tool-calling, and structured AI workflows",
+
+      "AI connected to APIs, databases, CRMs, communication systems, and business applications",
+
+      "n8n, Zapier, Make, Twilio, and custom workflow automation",
+
+      "Validation, permissions, human-in-the-loop controls, logging, and secure server-side execution",
     ],
+
     engagement:
-      "Fixed-scope AI sprint or staged implementation, typically 2–6 weeks depending on integrations and workflow complexity.",
+      "Fixed-scope AI sprint or staged implementation, typically 2–8 weeks depending on model integration and workflow complexity.",
+
     accent: "#0891b2",
   },
 
   {
-    title: "CRM, CMS & eCommerce Development",
+    title: "Web, Mobile & Systems Integration",
+
     description:
-      "Websites and business platforms built around the tools companies already depend on. With deep experience across WordPress, Shopify, HubSpot, WooCommerce, and CRM integrations, I can extend an existing platform, rebuild a broken workflow, or connect the website to the systems behind it.",
+      "I connect applications across web, mobile, backend services, APIs, cloud infrastructure, and external platforms. The result is a cohesive technical system rather than a collection of disconnected applications.",
+
     deliverables: [
-      "Custom WordPress, Shopify, WooCommerce, and HubSpot implementations",
-      "CRM integrations with platforms such as HubSpot, Pipedrive, and Zoho",
-      "Custom themes, portals, CMS experiences, and conversion-focused interfaces",
-      "API integrations connecting websites, CRMs, automation, and external services",
-      "Performance, usability, SEO, and ongoing technical improvements",
+      "React Native applications for iOS and Android with connected backend services",
+
+      "Backend APIs and services using Python, Node.js, C#, and .NET",
+
+      "API architecture, webhooks, authentication, data synchronization, and third-party integrations",
+
+      "Cloud infrastructure, Docker, CI/CD, deployment, and production environments",
+
+      "CRM, CMS, eCommerce, payment, shipping, communication, and automation integrations",
+
+      "Legacy application modernization, system integration, and architecture improvements",
     ],
+
     engagement:
-      "Fixed-scope implementation or monthly development retainer, typically 2–6 weeks for defined projects.",
+      "Fixed-scope integration or architecture project, typically 2–8 weeks depending on system complexity and integration requirements.",
+
     accent: "#d946ef",
   },
 ];

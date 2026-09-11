@@ -9,57 +9,227 @@ export type PersonalProject = {
 
 export const personalProjects: PersonalProject[] = [
   {
-  title: "AI Ticket Management System",
+    title: "Nexus AI Full-Stack AI-Driven E-Commerce Architecture",
 
-  description:
-    "Multi-role ticketing platform with AI classification, summarization, and smart reply suggestions. Includes Zod-validated APIs, Cloudinary uploads, and automated email notifications.",
+    description:
+      "AI-driven eCommerce platform engineered across the full stack, combining a Next.js and React frontend with Python/FastAPI services, multiple databases, Redis caching, AI/LLM integrations, authentication, search, and cloud infrastructure.",
 
-  stack: [
-    "Next.js",
-    "MongoDB",
-    "Zod",
-    "Cloudinary",
-    "AI APIs"
-  ],
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "AI/LLM",
+      "Cloud"
+    ],
 
-  github: "",
-  live: "https://ticket-system-nextjs-kappa.vercel.app",
-  accent: "#7C3AED",
-},
+    github: "",
+    live: "",
+    accent: "#7C3AED",
+  },
 
-{
-  title: "MCP Secure AI Database Platform",
+  {
+    title: "QuickAI – Full-Stack AI Web App",
 
-  description:
-    "GPT-powered database agent that generates, validates, and executes SQL through MCP tools with RBAC, dry-run safeguards, and full audit logging.",
+    description:
+      "Full-stack AI application for generating articles, blog titles, and images through integrated AI services. Built with a React/Vite frontend, Node.js/Express backend, PostgreSQL, authentication, Cloudinary, and multiple AI APIs.",
 
-  stack: [
-    "FastAPI",
-    "PostgreSQL",
-    "SQLAlchemy",
-    "MCP",
-    "OpenAI"
-  ],
+    stack: [
+      "React",
+      "Vite",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Cloudinary",
+      "AI APIs",
+      "Authentication"
+    ],
 
-  github: "",
-  accent: "#0E7490",
-},
+    github: "",
+    live: "",
+    accent: "#0E7490",
+  },
 
-{
-  title: "AI Interview Scheduler",
+  {
+    title: "Full-Stack Warehouse & Inventory Management System",
 
-  description:
-    "Multi-agent scheduling system using LangGraph stateful workflows, LLM intent classification, tool-based execution, and real-time agent observability.",
+    description:
+      "Full-stack warehouse platform for managing products, suppliers, clients, orders, invoices, warehouses, and support operations. Includes role-based access, analytics, QR workflows, Stripe payments, Shippo shipping, and Brevo notifications.",
 
-  stack: [
-    "FastAPI",
-    "LangGraph",
-    "Groq",
-    "SQLAlchemy"
-  ],
+    stack: [
+      "Next.js",
+      "React",
+      "Prisma",
+      "MongoDB",
+      "Stripe",
+      "Shippo",
+      "Brevo",
+      "RBAC"
+    ],
 
-  github: "",
-  live: "https://ai-interview-chatbot-gilt.vercel.app",
-  accent: "#6366F1",
-},
+    github: "",
+    live: "",
+    accent: "#2563EB",
+  },
+
+  {
+    title: "Roastery SaaS Platform",
+
+    description:
+      "SaaS platform for coffee roasters with multi-party payment infrastructure, seller onboarding, split transactions, platform commissions, and recurring subscription billing.",
+
+    stack: [
+      "SaaS",
+      "Stripe Connect",
+      "Payments",
+      "Subscriptions",
+      "API Integration",
+      "Multi-Party Transactions"
+    ],
+
+    github: "",
+    live: "",
+    accent: "#B45309",
+  },
+
+  {
+    title: "AI Appointment & Customer-Service Automation",
+
+    description:
+      "AI-powered customer-service and appointment automation connecting an LLM agent with Twilio, CRM systems, and workflow automation to handle appointment booking and rescheduling.",
+
+    stack: [
+      "AI/LLM",
+      "n8n",
+      "Twilio",
+      "CRM",
+      "Workflow Automation",
+      "API Integration"
+    ],
+
+    github: "",
+    live: "",
+    accent: "#059669",
+  },
+
+  {
+    title: "CRM Marketing Automation Platform",
+
+    description:
+      "Python-based CRM marketing automation platform built with layered architecture and separated authentication, model, repository, and service responsibilities for maintainable business workflows.",
+
+    stack: [
+      "Python",
+      "Flask",
+      "CRM",
+      "REST APIs",
+      "Repository Pattern",
+      "Service Architecture"
+    ],
+
+    github: "",
+    live: "",
+    accent: "#DC2626",
+  },
+
+  {
+    title: "Electrical & HVAC Service Platform",
+
+    description:
+      "Modern service platform built with Nuxt and Vue.js, featuring reusable components, dynamic service and location pages, lead forms, interactive maps, external integrations, SSR/SEO, and performance-focused frontend architecture.",
+
+    stack: [
+      "Nuxt",
+      "Vue.js",
+      "TypeScript",
+      "JavaScript",
+      "SSR",
+      "SEO",
+      "API Integration"
+    ],
+
+    github: "",
+    live: "",
+    accent: "#0284C7",
+  },
+
+  {
+    title: "CRM-Integrated Client Portal",
+
+    description:
+      "Client portal synchronized bi-directionally with Pipedrive through a custom API integration layer, connecting the customer-facing experience with CRM data and business workflows.",
+
+    stack: [
+      "WordPress",
+      "Elementor",
+      "PHP",
+      "Pipedrive",
+      "REST APIs",
+      "CRM Integration"
+    ],
+
+    github: "",
+    live: "",
+    accent: "#475569",
+  },
+
+  {
+    title: "AI Ticket Management System",
+
+    description:
+      "Multi-role ticketing platform with AI classification, summarization, and smart reply suggestions. Includes Zod-validated APIs, Cloudinary uploads, and automated email notifications.",
+
+    stack: [
+      "Next.js",
+      "MongoDB",
+      "Zod",
+      "Cloudinary",
+      "AI APIs"
+    ],
+
+    github: "",
+    live: "",
+    accent: "#7C3AED",
+  },
+
+  {
+    title: "MCP Secure AI Database Platform",
+
+    description:
+      "GPT-powered database agent that generates, validates, and executes SQL through MCP tools with RBAC, dry-run safeguards, and full audit logging.",
+
+    stack: [
+      "FastAPI",
+      "PostgreSQL",
+      "SQLAlchemy",
+      "MCP",
+      "OpenAI"
+    ],
+
+    github: "",
+    live: "",
+    accent: "#0E7490",
+  },
+
+  {
+    title: "AI Interview Scheduler",
+
+    description:
+      "Multi-agent scheduling system using LangGraph stateful workflows, LLM intent classification, tool-based execution, and real-time agent observability.",
+
+    stack: [
+      "FastAPI",
+      "LangGraph",
+      "Groq",
+      "SQLAlchemy"
+    ],
+
+    github: "",
+    live: "",
+    accent: "#6366F1",
+  },
 ];

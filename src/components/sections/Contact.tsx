@@ -33,33 +33,33 @@ const directLines = [
 ];
 
 export default function Contact() {
-  const [values, setValues] = useState({ name: "", email: "", message: "" });
-  const [error, setError] = useState<{ field: string; text: string } | null>(null);
-  const [sent, setSent] = useState(false);
+  // const [values, setValues] = useState({ name: "", email: "", message: "" });
+  // const [error, setError] = useState<{ field: string; text: string } | null>(null);
+  // const [sent, setSent] = useState(false);
 
-  const set = (field: keyof typeof values) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setValues((v) => ({ ...v, [field]: e.target.value }));
-    if (error?.field === field) setError(null);
-  };
+  // const set = (field: keyof typeof values) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  //   setValues((v) => ({ ...v, [field]: e.target.value }));
+  //   if (error?.field === field) setError(null);
+  // };
 
   // No backend here, so submitting hands off to the visitor's mail client with
   // everything prefilled. Swap this body for a fetch() when an endpoint exists.
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!values.name.trim()) return setError({ field: "name", text: "Please tell me your name." });
-    if (!EMAIL_RE.test(values.email))
-      return setError({ field: "email", text: "That email address doesn't look right." });
-    if (values.message.trim().length < 10)
-      return setError({ field: "message", text: "A line or two about the project helps." });
+  // const onSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   if (!values.name.trim()) return setError({ field: "name", text: "Please tell me your name." });
+  //   if (!EMAIL_RE.test(values.email))
+  //     return setError({ field: "email", text: "That email address doesn't look right." });
+  //   if (values.message.trim().length < 10)
+  //     return setError({ field: "message", text: "A line or two about the project helps." });
 
-    setError(null);
-    const subject = `Project enquiry from ${values.name.trim()}`;
-    const body = `${values.message.trim()}\n\n— ${values.name.trim()}\n${values.email.trim()}`;
-    window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-    setSent(true);
-  };
+  //   setError(null);
+  //   const subject = `Project enquiry from ${values.name.trim()}`;
+  //   const body = `${values.message.trim()}\n\n— ${values.name.trim()}\n${values.email.trim()}`;
+  //   window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(
+  //     subject
+  //   )}&body=${encodeURIComponent(body)}`;
+  //   setSent(true);
+  // };
 
   return (
     <section id="contact" className="relative overflow-hidden px-6 py-24 sm:py-32">
@@ -82,7 +82,7 @@ export default function Contact() {
               split="words"
               className="font-display text-3xl font-bold tracking-tight sm:text-5xl md:text-6xl"
             >
-              Your operations are already running —
+            Have a product in mind?
             </TextReveal>
             <TextReveal
               as="h2"
@@ -90,16 +90,16 @@ export default function Contact() {
               delay={0.15}
               className="text-gradient font-display text-3xl font-bold tracking-tight sm:text-5xl md:text-6xl"
             >
-              let&apos;s turn them into software.
+              Let&apos;s build it.
             </TextReveal>
 
             <Reveal delay={0.2}>
               <p className="mt-6 max-w-xl text-muted-foreground">
-                If your business already depends on spreadsheets, CRMs, websites, APIs, manual processes, or repetitive communication, there's usually an opportunity to connect them into something better.
+                From AI-powered applications and SaaS platforms to mobile apps, APIs, backend systems, and cloud infrastructure, I build software across the full stack.
               </p>
               <br/>
               <p>
-                Tell me what you're trying to build, fix, or automate.
+                Tell me what you&apos;re trying to build, improve, or solve.
               </p>
             </Reveal>
 

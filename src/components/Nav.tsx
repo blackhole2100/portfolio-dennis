@@ -8,9 +8,9 @@ import { Menu, X } from "lucide-react";
 import MagneticButton from "@/components/MagneticButton";
 
 const links = [
-  { href: "/#work", label: "Work" },
+  // { href: "/#work", label: "Work" },
   // { href: "/#automations", label: "Automations" },
-  // { href: "/#projects", label: "Projects" },
+  { href: "/#projects", label: "Projects" },
   { href: "/#about", label: "About" },
   { href: "/#experience", label: "Experience" },
   { href: "/#services", label: "Services" },

@@ -13,7 +13,7 @@ export default function Projects() {
       <SectionHeading
         index="04"
         eyebrow="Personal Projects"
-        title="Things I build after hours"
+        title="Selected Projects"
       />
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

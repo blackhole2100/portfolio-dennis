@@ -78,7 +78,7 @@ export default async function CaseStudyPage({
             <ArrowLeft size={14} /> all work
           </Link>
           <p className="mb-4 font-mono text-xs tracking-[0.3em] uppercase" style={{ color: cs.accent }}>
-            {cs.tag} · {companyIntro.company}
+            {/* {cs.tag} · {companyIntro.company} */}
           </p>
           <TextReveal
             as="h1"

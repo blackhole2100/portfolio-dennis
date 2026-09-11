@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import { motion } from "motion/react";
 import { ArrowDown, Download } from "lucide-react";
-// import { GithubIcon } from "@/components/icons";
+import { GithubIcon, LinkedinIcon } from "@/components/icons";
 import { profile } from "@/data/profile";
 import TextReveal from "@/components/TextReveal";
 import MagneticButton from "@/components/MagneticButton";
@@ -59,7 +59,7 @@ export default function Hero() {
           delay={1.8}
           className="font-display text-[13vw] leading-[0.95] font-bold tracking-tight sm:text-7xl md:text-8xl lg:text-[7rem]"
         >
-          Dennis Haun
+          {profile.name}
         </TextReveal>
 
         <motion.p
@@ -70,7 +70,7 @@ export default function Hero() {
         >
           {profile.tagline} 
           <br></br>
-          Full-stack applications, AI-powered automation, CRM platforms, and CMS systems built around the way businesses actually operate.
+          {profile.intro}
         </motion.p>
 
         <motion.div
@@ -85,7 +85,7 @@ export default function Hero() {
               data-cursor
               className="glass-solid inline-flex h-12 items-center gap-2 rounded-full bg-primary px-7 font-medium text-white transition-shadow"
             >
-              View my work <ArrowDown size={16} />
+              {profile.hero_buttons.project} <ArrowDown size={16} />
             </a>
           </MagneticButton>
           <MagneticButton>
@@ -94,7 +94,7 @@ export default function Hero() {
               data-cursor
               className="glass glass-btn inline-flex h-12 items-center gap-2 rounded-full px-7 font-medium text-foreground hover:text-primary"
             >
-              Let's work together
+              {profile.hero_buttons.contact}
             </a>
           </MagneticButton>
           <MagneticButton>
@@ -105,10 +105,22 @@ export default function Hero() {
               className="glass glass-btn inline-flex h-12 items-center gap-2 rounded-full px-7 font-medium text-foreground hover:text-primary"
             >
                 <Download size={20} />
-                Resume
+                {profile.hero_buttons.resume}
             </a>
           </MagneticButton>
-          {/* <MagneticButton>
+          <MagneticButton>
+            <a
+              href={profile.socials.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Linkedin"
+              data-cursor
+              className="glass glass-btn inline-flex h-12 w-12 items-center justify-center rounded-full text-muted-foreground hover:text-primary"
+            >
+              <LinkedinIcon size={18} />
+            </a>
+          </MagneticButton>
+          <MagneticButton>
             <a
               href={profile.socials.github}
               target="_blank"
@@ -119,7 +131,7 @@ export default function Hero() {
             >
               <GithubIcon size={18} />
             </a>
-          </MagneticButton> */}
+          </MagneticButton>
         </motion.div>
       </div>
 

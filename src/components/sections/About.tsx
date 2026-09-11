@@ -22,7 +22,7 @@ function Portrait() {
       <div className="absolute inset-0 rounded-full bg-linear-to-br from-primary via-secondary to-accent p-0.75 shadow-[0_12px_40px_rgba(124,58,237,0.22)]">
         <div className="relative h-full w-full overflow-hidden rounded-full bg-card">
           <Image
-            src="/dennis.jpg"
+            src="/#dennis.jpg"
             alt="Dennis "
             fill
             sizes="(max-width: 640px) 224px, 288px"
@@ -50,7 +50,7 @@ export default function About() {
       <SectionHeading
         index="05"
         eyebrow="About"
-        title="I ship systems, not demos"
+        title="Engineering across the entire system."
       />
 
       <div className="grid items-start gap-12 lg:grid-cols-[1fr_20rem]">
