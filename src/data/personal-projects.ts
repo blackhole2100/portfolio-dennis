@@ -192,6 +192,60 @@ export const personalProjects: PersonalProject[] = [
     accent: "#B45309",
   },
 
+    {
+    title: "Various Service Platform",
+    media: [
+      {
+        type: "image",
+        src: "/hvac-01.jpg",
+      },
+      {
+        type: "image",
+        src: "/hvac-02.jpg",
+      },
+      {
+        type: "image",
+        src: "/hvac-03.jpg",
+      },
+      {
+        type: "image",
+        src: "/hvac-04.jpg",
+      },
+      {
+        type: "image",
+        src: "/hvac-05.jpg",
+      },
+      {
+        type: "image",
+        src: "/hvac-06.jpg",
+      },
+      {
+        type: "image",
+        src: "/hvac-07.jpg",
+      },
+      {
+        type: "video",
+        src: "/hvac-08.mp4",
+      },
+    ],
+    description:
+      "Modern service platform built with Next.js, React.js, Nuxt and Vue.js, featuring reusable components, dynamic service and location pages, lead forms, interactive maps, external integrations, SSR/SEO, and performance-focused frontend architecture.",
+
+    stack: [
+      "Nuxt",
+      "Vue.js",
+      "TypeScript",
+      "JavaScript",
+      "SSR",
+      "SEO",
+      "API Integration"
+    ],
+
+    github: "",
+    live: "",
+    accent: "#0284C7",
+  },
+
   {
     title: "AI Appointment & Customer-Service Automation",
     media: [
@@ -240,6 +294,10 @@ export const personalProjects: PersonalProject[] = [
         type: "image",
         src: "/crm-marketing-02.jpg",
       },
+      {
+        type: "video",
+        src: "/crm-marketing-03.mp4",
+      },
     ],
     description:
       "Python-based CRM marketing automation platform built with layered architecture and separated authentication, model, repository, and service responsibilities for maintainable business workflows.",
@@ -259,56 +317,6 @@ export const personalProjects: PersonalProject[] = [
   },
 
   {
-    title: "Various Service Platform",
-    media: [
-      {
-        type: "image",
-        src: "/hvac-01.jpg",
-      },
-      {
-        type: "image",
-        src: "/hvac-02.jpg",
-      },
-      {
-        type: "image",
-        src: "/hvac-03.jpg",
-      },
-      {
-        type: "image",
-        src: "/hvac-04.jpg",
-      },
-      {
-        type: "image",
-        src: "/hvac-05.jpg",
-      },
-      {
-        type: "image",
-        src: "/hvac-06.jpg",
-      },
-      {
-        type: "image",
-        src: "/hvac-07.jpg",
-      },
-    ],
-    description:
-      "Modern service platform built with Next.js, React.js, Nuxt and Vue.js, featuring reusable components, dynamic service and location pages, lead forms, interactive maps, external integrations, SSR/SEO, and performance-focused frontend architecture.",
-
-    stack: [
-      "Nuxt",
-      "Vue.js",
-      "TypeScript",
-      "JavaScript",
-      "SSR",
-      "SEO",
-      "API Integration"
-    ],
-
-    github: "",
-    live: "",
-    accent: "#0284C7",
-  },
-
-  {
     title: "MCP Secure AI Database Platform",
     media: [
       {
@@ -320,8 +328,16 @@ export const personalProjects: PersonalProject[] = [
         src: "/mcp-02.jpg",
       },
       {
+        type: "video",
+        src: "/mcp-03.mp4",
+      },
+      {
         type: "image",
-        src: "/mcp-03.jpg",
+        src: "/mcp-04.jpg",
+      },
+      {
+        type: "image",
+        src: "/mcp-05.jpg",
       },
     ],
 
