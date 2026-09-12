@@ -13,8 +13,8 @@ export const personalProjects: PersonalProject[] = [
     title: "AI Full-Stack AI-Driven E-Commerce Architecture",
     image: [
       "/ai-full-stack-01.jpg",
-      "/quickAI-02.jpg",
-      "/warehouse-full-stack-03.jpg",
+      "/ai-full-stack-02.jpg",
+      "/ai-full-stack-03.jpg",
     ],
     description:
       "AI-driven eCommerce platform engineered across the full stack, combining a Next.js and React frontend with Python/FastAPI services, multiple databases, Redis caching, AI/LLM integrations, authentication, search, and cloud infrastructure.",

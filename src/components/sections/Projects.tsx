@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // import { ExternalLink } from "lucide-react";
 // import { GithubIcon } from "@/components/icons";
@@ -27,8 +27,30 @@ export default function Projects() {
     }));
   };
 
+  // Automatically move to the next image every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveImages((prev) => {
+        const next = { ...prev };
+
+        personalProjects.forEach((p) => {
+          if (p.image.length > 1) {
+            next[p.title] = ((prev[p.title] ?? 0) + 1) % p.image.length;
+          }
+        });
+
+        return next;
+      });
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section id="projects" className="relative mx-auto max-w-6xl px-6 py-20 sm:py-28">
+    <section
+      id="projects"
+      className="relative mx-auto max-w-6xl px-6 py-20 sm:py-28"
+    >
       <SectionHeading
         index="04"
         eyebrow="Personal Projects"
@@ -39,18 +61,33 @@ export default function Projects() {
         {personalProjects.map((p, i) => {
           const currentImage = activeImages[p.title] ?? 0;
           const hasMultipleImages = p.image.length > 1;
+
           return (
             <Reveal key={p.title} delay={Math.min(i * 0.05, 0.25)}>
               <SpotlightCard className="group flex h-full flex-col p-6">
                 {/* Project Image */}
                 <div className="relative mb-5 aspect-[16/10] w-full overflow-hidden rounded-lg">
-                  <Image
-                    src={p.image[currentImage]}
-                    alt={p.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
+                  <div
+                    className="flex h-full transition-transform duration-700 ease-in-out"
+                    style={{
+                      transform: `translateX(-${currentImage * 100}%)`,
+                    }}
+                  >
+                    {p.image.map((image, index) => (
+                      <div
+                        key={`${p.title}-${index}`}
+                        className="relative h-full min-w-full shrink-0"
+                      >
+                        <Image
+                          src={image}
+                          alt={`${p.title} screenshot ${index + 1}`}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                      </div>
+                    ))}
+                  </div>
 
                   {hasMultipleImages && (
                     <>
@@ -61,7 +98,7 @@ export default function Projects() {
                           previousImage(p.title, p.image.length)
                         }
                         aria-label={`Previous image for ${p.title}`}
-                        className="absolute left-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition hover:bg-black/70"
+                        className="absolute left-2 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition hover:bg-black/70"
                       >
                         ←
                       </button>
@@ -73,13 +110,13 @@ export default function Projects() {
                           nextImage(p.title, p.image.length)
                         }
                         aria-label={`Next image for ${p.title}`}
-                        className="absolute right-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition hover:bg-black/70"
+                        className="absolute right-2 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition hover:bg-black/70"
                       >
                         →
                       </button>
 
                       {/* Dots */}
-                      <div className="absolute bottom-2 left-1/2 flex -translate-x-1/2 gap-1.5">
+                      <div className="absolute bottom-2 left-1/2 z-10 flex -translate-x-1/2 gap-1.5">
                         {p.image.map((_, index) => (
                           <button
                             key={index}
@@ -91,10 +128,10 @@ export default function Projects() {
                               }))
                             }
                             aria-label={`Show image ${index + 1}`}
-                            className={`h-1.5 rounded-full transition-all ${
+                            className={`h-1.5 rounded-full transition-all duration-300 ${
                               index === currentImage
                                 ? "w-4 bg-white"
-                                : "w-1.5 bg-white/50"
+                                : "w-1.5 bg-white/50 hover:bg-white/80"
                             }`}
                           />
                         ))}
@@ -132,9 +169,7 @@ export default function Projects() {
                     ))}
                   </div>
 
-                  {/* <div className="flex items-center gap-2">
-                    ...
-                  </div> */}
+
                 </div>
               </SpotlightCard>
             </Reveal>
