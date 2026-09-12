@@ -53,8 +53,7 @@ export default function About() {
         title="Engineering across the entire system."
       />
 
-      {/* <div className="grid items-start gap-12 lg:grid-cols-[1fr_20rem]"> */}
-      <div className="grid items-start gap-12 ">
+      <div className="grid items-start gap-12 lg:grid-cols-[1fr_20rem]">
         <div className="space-y-5">
           {profile.about.map((p, i) => (
             <Reveal key={i} delay={i * 0.08}>
@@ -74,7 +73,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* <Reveal delay={0.15} className="lg:sticky lg:top-28">
+        <Reveal delay={0.15} className="lg:sticky lg:top-28">
           <Portrait />
           <p className="mt-5 text-center font-mono text-xs text-subtle-foreground">
             {profile.name}
@@ -82,7 +81,7 @@ export default function About() {
           <p className="mt-1 text-center font-mono text-[11px] text-accent">
             {profile.role}
           </p>
-        </Reveal> */}
+        </Reveal>
       </div>
 
       {/* skills marquee */}

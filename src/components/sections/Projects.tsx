@@ -90,7 +90,7 @@ function ProjectMedia({ title, media }: ProjectMediaProps) {
 
     imageTimerRef.current = setTimeout(() => {
       next();
-    }, 3000);
+    }, 5000);
 
     return () => {
       clearImageTimer();
