@@ -2,6 +2,7 @@
 
 // import { ExternalLink } from "lucide-react";
 // import { GithubIcon } from "@/components/icons";
+import Image from "next/image";
 import { personalProjects } from "@/data/personal-projects";
 import SectionHeading from "@/components/SectionHeading";
 import SpotlightCard from "@/components/SpotlightCard";
@@ -20,6 +21,16 @@ export default function Projects() {
         {personalProjects.map((p, i) => (
           <Reveal key={p.title} delay={Math.min(i * 0.05, 0.25)}>
             <SpotlightCard className="group flex h-full flex-col p-6">
+              {/* Project Image */}
+              <div className="relative mb-5 aspect-[16/10] w-full overflow-hidden rounded-lg">
+                <Image
+                  src={p.image}
+                  alt={p.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+              </div>
               <div
                 className="mb-5 h-1 w-12 rounded-full transition-all duration-500 group-hover:w-20"
                 style={{ background: p.accent, boxShadow: `0 0 16px ${p.accent}66` }}
