@@ -162,6 +162,18 @@ export const personalProjects: PersonalProject[] = [
         type: "image",
         src: "/roastery-saas-02.jpg",
       },
+      {
+        type: "image",
+        src: "/roastery-saas-03.jpg",
+      },
+      {
+        type: "image",
+        src: "/roastery-saas-04.jpg",
+      },
+      {
+        type: "image",
+        src: "/roastery-saas-05.jpg",
+      },
     ],
     description:
       "SaaS platform for coffee roasters with multi-party payment infrastructure, seller onboarding, split transactions, platform commissions, and recurring subscription billing.",
@@ -186,6 +198,18 @@ export const personalProjects: PersonalProject[] = [
       {
         type: "image",
         src: "/ai-appointment-01.jpg",
+      },
+      {
+        type: "image",
+        src: "/ai-appointment-02.jpg",
+      },
+      {
+        type: "image",
+        src: "/ai-appointment-03.jpg",
+      },
+      {
+        type: "video",
+        src: "/ai-appointment-04.mp4",
       },
     ],
     description:
@@ -212,6 +236,10 @@ export const personalProjects: PersonalProject[] = [
         type: "image",
         src: "/crm-marketing-01.jpg",
       },
+      {
+        type: "image",
+        src: "/crm-marketing-02.jpg",
+      },
     ],
     description:
       "Python-based CRM marketing automation platform built with layered architecture and separated authentication, model, repository, and service responsibilities for maintainable business workflows.",
@@ -231,15 +259,39 @@ export const personalProjects: PersonalProject[] = [
   },
 
   {
-    title: "Electrical & HVAC Service Platform",
+    title: "Various Service Platform",
     media: [
       {
         type: "image",
         src: "/hvac-01.jpg",
       },
+      {
+        type: "image",
+        src: "/hvac-02.jpg",
+      },
+      {
+        type: "image",
+        src: "/hvac-03.jpg",
+      },
+      {
+        type: "image",
+        src: "/hvac-04.jpg",
+      },
+      {
+        type: "image",
+        src: "/hvac-05.jpg",
+      },
+      {
+        type: "image",
+        src: "/hvac-06.jpg",
+      },
+      {
+        type: "image",
+        src: "/hvac-07.jpg",
+      },
     ],
     description:
-      "Modern service platform built with Nuxt and Vue.js, featuring reusable components, dynamic service and location pages, lead forms, interactive maps, external integrations, SSR/SEO, and performance-focused frontend architecture.",
+      "Modern service platform built with Next.js, React.js, Nuxt and Vue.js, featuring reusable components, dynamic service and location pages, lead forms, interactive maps, external integrations, SSR/SEO, and performance-focused frontend architecture.",
 
     stack: [
       "Nuxt",
@@ -266,6 +318,10 @@ export const personalProjects: PersonalProject[] = [
       {
         type: "image",
         src: "/mcp-02.jpg",
+      },
+      {
+        type: "image",
+        src: "/mcp-03.jpg",
       },
     ],
 

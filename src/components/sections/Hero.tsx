@@ -81,7 +81,7 @@ export default function Hero() {
         >
           <MagneticButton>
             <a
-              href="#work"
+              href="#projects"
               data-cursor
               className="glass-solid inline-flex h-12 items-center gap-2 rounded-full bg-primary px-7 font-medium text-white transition-shadow"
             >
