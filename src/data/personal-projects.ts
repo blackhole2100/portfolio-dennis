@@ -1,6 +1,6 @@
 export type PersonalProject = {
   title: string;
-  image: string;
+  image: string[];
   description: string;
   stack: string[];
   github: string;
@@ -11,7 +11,11 @@ export type PersonalProject = {
 export const personalProjects: PersonalProject[] = [
   {
     title: "AI Full-Stack AI-Driven E-Commerce Architecture",
-    image:"/ai-full-stack-01.jpg",
+    image: [
+      "/ai-full-stack-01.jpg",
+      "/quickAI-02.jpg",
+      "/warehouse-full-stack-03.jpg",
+    ],
     description:
       "AI-driven eCommerce platform engineered across the full stack, combining a Next.js and React frontend with Python/FastAPI services, multiple databases, Redis caching, AI/LLM integrations, authentication, search, and cloud infrastructure.",
 
@@ -35,7 +39,7 @@ export const personalProjects: PersonalProject[] = [
 
   {
     title: "QuickAI – Full-Stack AI Web App",
-    image:"/quickAI-02.jpg",
+    image:["/quickAI-02.jpg",],
     description:
       "Full-stack AI application for generating articles, blog titles, and images through integrated AI services. Built with a React/Vite frontend, Node.js/Express backend, PostgreSQL, authentication, Cloudinary, and multiple AI APIs.",
 
@@ -57,7 +61,7 @@ export const personalProjects: PersonalProject[] = [
 
   {
     title: "Full-Stack Warehouse & Inventory Management System",
-    image:"/warehouse-full-stack-03.jpg",
+    image:["/warehouse-full-stack-03.jpg",],
     description:
       "Full-stack warehouse platform for managing products, suppliers, clients, orders, invoices, warehouses, and support operations. Includes role-based access, analytics, QR workflows, Stripe payments, Shippo shipping, and Brevo notifications.",
 
@@ -79,7 +83,7 @@ export const personalProjects: PersonalProject[] = [
 
   {
     title: "Roastery SaaS Platform",
-    image:"/roastery-saas-04.jpg",
+    image:["/roastery-saas-04.jpg",],
     description:
       "SaaS platform for coffee roasters with multi-party payment infrastructure, seller onboarding, split transactions, platform commissions, and recurring subscription billing.",
 
@@ -99,7 +103,7 @@ export const personalProjects: PersonalProject[] = [
 
   {
     title: "AI Appointment & Customer-Service Automation",
-    image:"/ai-appointment-05.jpg",
+    image:["/ai-appointment-05.jpg",],
     description:
       "AI-powered customer-service and appointment automation connecting an LLM agent with Twilio, CRM systems, and workflow automation to handle appointment booking and rescheduling.",
 
@@ -119,7 +123,7 @@ export const personalProjects: PersonalProject[] = [
 
   {
     title: "CRM Marketing Automation Platform",
-    image:"/crm-marketing-06.jpg",
+    image:["/crm-marketing-06.jpg",],
     description:
       "Python-based CRM marketing automation platform built with layered architecture and separated authentication, model, repository, and service responsibilities for maintainable business workflows.",
 
@@ -139,7 +143,7 @@ export const personalProjects: PersonalProject[] = [
 
   {
     title: "Electrical & HVAC Service Platform",
-    image:"/hvac-07.jpg",
+    image:["/hvac-07.jpg",],
     description:
       "Modern service platform built with Nuxt and Vue.js, featuring reusable components, dynamic service and location pages, lead forms, interactive maps, external integrations, SSR/SEO, and performance-focused frontend architecture.",
 
@@ -160,7 +164,7 @@ export const personalProjects: PersonalProject[] = [
 
   {
     title: "AI Ticket Management System",
-    image:"/ai-ticket-08.jpg",
+    image:["/ai-ticket-08.jpg",],
     description:
       "Multi-role ticketing platform with AI classification, summarization, and smart reply suggestions. Includes Zod-validated APIs, Cloudinary uploads, and automated email notifications.",
 
@@ -179,7 +183,7 @@ export const personalProjects: PersonalProject[] = [
 
   {
     title: "MCP Secure AI Database Platform",
-    image:"/mcp-09.jpg",
+    image:["/mcp-09.jpg",],
 
     description:
       "GPT-powered database agent that generates, validates, and executes SQL through MCP tools with RBAC, dry-run safeguards, and full audit logging.",
