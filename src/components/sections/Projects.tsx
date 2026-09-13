@@ -20,11 +20,9 @@ type ProjectMediaProps = {
 
 function ProjectMedia({ title, media }: ProjectMediaProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [entering, setEntering] = useState(false);
-  const [direction, setDirection] = useState<"next" | "previous">("next");
 
+  const videoRefs = useRef<Record<number, HTMLVideoElement | null>>({});
   const imageTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   const currentItem = media[currentIndex];
   const hasMultipleMedia = media.length > 1;
@@ -36,50 +34,40 @@ function ProjectMedia({ title, media }: ProjectMediaProps) {
     }
   };
 
-  const goTo = (
-    index: number,
-    moveDirection: "next" | "previous" = "next"
-  ) => {
+  const stopAllVideos = () => {
+    Object.values(videoRefs.current).forEach((video) => {
+      if (video) {
+        video.pause();
+      }
+    });
+  };
+
+  const goTo = (index: number) => {
     if (!media[index]) return;
 
     clearImageTimer();
+    stopAllVideos();
 
-    if (videoRef.current) {
-      videoRef.current.pause();
-      videoRef.current = null;
-    }
-
-    setDirection(moveDirection);
-    setEntering(true);
     setCurrentIndex(index);
-
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        setEntering(false);
-      });
-    });
   };
 
   const next = () => {
     if (!hasMultipleMedia) return;
 
-    goTo(
-      (currentIndex + 1) % media.length,
-      "next"
-    );
+    setCurrentIndex((prev) => (prev + 1) % media.length);
   };
 
   const previous = () => {
     if (!hasMultipleMedia) return;
 
-    goTo(
-      (currentIndex - 1 + media.length) % media.length,
-      "previous"
+    setCurrentIndex(
+      (prev) => (prev - 1 + media.length) % media.length
     );
   };
 
   /*
-   * Images stay visible for 3 seconds.
+   * Images:
+   * Display for 3 seconds, then move to the next item.
    */
   useEffect(() => {
     clearImageTimer();
@@ -90,11 +78,46 @@ function ProjectMedia({ title, media }: ProjectMediaProps) {
 
     imageTimerRef.current = setTimeout(() => {
       next();
-    }, 5000);
+    }, 3000);
 
     return () => {
       clearImageTimer();
     };
+  }, [currentIndex]);
+
+  /*
+   * Start the active video.
+   *
+   * Important:
+   * We do not reset currentTime here.
+   * The video is only started when it becomes the active item.
+   */
+  useEffect(() => {
+    if (!currentItem || currentItem.type !== "video") {
+      return;
+    }
+
+    const video = videoRefs.current[currentIndex];
+
+    if (!video) return;
+
+    const playVideo = () => {
+      if (video.paused) {
+        video.play().catch(() => {});
+      }
+    };
+
+    if (video.readyState >= 2) {
+      playVideo();
+    } else {
+      video.addEventListener("canplay", playVideo, {
+        once: true,
+      });
+
+      return () => {
+        video.removeEventListener("canplay", playVideo);
+      };
+    }
   }, [currentIndex]);
 
   /*
@@ -103,10 +126,7 @@ function ProjectMedia({ title, media }: ProjectMediaProps) {
   useEffect(() => {
     return () => {
       clearImageTimer();
-
-      if (videoRef.current) {
-        videoRef.current.pause();
-      }
+      stopAllVideos();
     };
   }, []);
 
@@ -116,45 +136,46 @@ function ProjectMedia({ title, media }: ProjectMediaProps) {
 
   return (
     <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg">
-      {/* Current Media */}
+      {/* Horizontal Media Track */}
       <div
-        key={`${title}-${currentIndex}`}
-        className={`absolute inset-0 ${
-          entering
-            ? direction === "next"
-              ? "translate-x-full"
-              : "-translate-x-full"
-            : "translate-x-0"
-        } transition-transform duration-700 ease-in-out`}
+        className="flex h-full transition-transform duration-700 ease-in-out"
+        style={{
+          transform: `translateX(-${currentIndex * 100}%)`,
+        }}
       >
-        {currentItem.type === "image" ? (
-          <Image
-            src={currentItem.src}
-            alt={`${title} screenshot ${currentIndex + 1}`}
-            fill
-            priority={currentIndex === 0}
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
-        ) : (
-          <video
-            ref={videoRef}
-            src={currentItem.src}
-            muted
-            autoPlay
-            playsInline
-            preload="auto"
-            className="h-full w-full object-cover"
-            onEnded={next}
-            onLoadedData={(event) => {
-              const video = event.currentTarget;
-
-              if (video.paused) {
-                video.play().catch(() => {});
-              }
-            }}
-          />
-        )}
+        {media.map((item, index) => (
+          <div
+            key={`${title}-${index}-${item.src}`}
+            className="relative h-full min-w-full shrink-0"
+          >
+            {item.type === "image" ? (
+              <Image
+                src={item.src}
+                alt={`${title} screenshot ${index + 1}`}
+                fill
+                priority={index === 0}
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            ) : (
+              <video
+                ref={(element) => {
+                  videoRefs.current[index] = element;
+                }}
+                src={item.src}
+                muted
+                playsInline
+                preload="auto"
+                className="h-full w-full object-cover"
+                onEnded={() => {
+                  if (index === currentIndex) {
+                    next();
+                  }
+                }}
+              />
+            )}
+          </div>
+        ))}
       </div>
 
       {hasMultipleMedia && (
@@ -185,12 +206,7 @@ function ProjectMedia({ title, media }: ProjectMediaProps) {
               <button
                 key={`${title}-dot-${index}`}
                 type="button"
-                onClick={() =>
-                  goTo(
-                    index,
-                    index >= currentIndex ? "next" : "previous"
-                  )
-                }
+                onClick={() => goTo(index)}
                 aria-label={`Show ${
                   item.type === "video" ? "video" : "image"
                 } ${index + 1}`}
