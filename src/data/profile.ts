@@ -15,7 +15,7 @@ export const profile = {
 
   socials: {
     github: "https://github.com/lightsunshine001",
-    linkedin: "https://www.linkedin.com/in/dennis-haun-391826434/",
+    linkedin: "https://www.linkedin.com/in/dennishaun/",
   },
   hero_buttons:{
     project:"View my work",
