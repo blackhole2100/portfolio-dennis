@@ -209,6 +209,7 @@ export const skillGroups: SkillGroup[] = [
       "Zoho",
       "Custom Business Systems",
       "Client Portals",
+      "Email Marketing"
     ],
     size: "sm",
   },
@@ -279,6 +280,7 @@ export const marqueeSkills = [
   "n8n",
   "CRM",
   "Automation",
+  "Email Marketing",
   "WordPress",
   "Shopify",
 ];

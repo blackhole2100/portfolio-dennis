@@ -5,7 +5,7 @@ export const profile = {
   phone: "",
   tagline: "I build the systems behind modern products.",
   intro:
-    "Full-stack applications, AI-powered software, mobile apps, APIs, cloud systems, and business automation, engineered end to end with Python, C#, .NET, TypeScript, React, Next.js, React Native, Node.js, Android, iOS, and AI/GenAI.",
+    "Full-stack applications, AI-powered software, mobile apps, APIs, cloud systems, and business automation, engineered end to end with Python, C#, .NET, TypeScript, React, Next.js, React Native, Node.js, Android, iOS, Email and AI/GenAI.",
 
   email: "dennis.h741216@gmail.com",
   location: "Utah, USA",
